@@ -1,7 +1,7 @@
-Author: <b><i>@r00t-3xp10it</i></b><br />
+Author: <b><i>@3bb13-ad3n</i></b><br />
 Version release: <b><i>v2.10.10</i></b><br />
 Distros Supported: <b><i>Windows (x86|x64), Linux</i></b><br />
-Inspired in the work of: ['@ZHacker13 - ReverseTCPShell'](https://github.com/ZHacker13/ReverseTCPShell)<br /><br />
+Inspired in the work of: ['@ZHacker13 - ReverseTCPShell'](https://github.com/ebbieaden/ReverseTCPShell)<br /><br />
 ![meterbanner](https://user-images.githubusercontent.com/23490060/134608569-ca194b98-8a6b-4da6-9848-326101ec3652.png)<br />
 
 [![Version](https://img.shields.io/badge/meterpeter-v2.10.10-brightgreen.svg?maxAge=259200)]()
@@ -15,14 +15,14 @@ Inspired in the work of: ['@ZHacker13 - ReverseTCPShell'](https://github.com/ZHa
 <br />
 
 ## :octocat: Quick Jump List<br />
-- **[Project Description](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#octocat-project-description)**<br />
-- **[List Of Available Modules](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#meterpeter-server-available-modules)**<br />
-- **[How To - Under Linux Distributions](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#attacker-machine-linux-kali)**<br />
-- **[How To - Under Windows Distributions](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#attacker-machiner-windows-pc)**<br />
-- **[Windows Defender (Target Related)](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#remark-about-windows-defender)**<br />
-- **[Special Thanks|Contributions|Videos](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#video-tutorials)**<br />
-- **[How To - Use PS2EXE to convert ps1 scripts to standalone executables](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#Use-PS2EXE-to-convert-ps1-scripts-to-standalone-executables)**<br />
-- **[Please Read my 'WIKI' page for detailed information about each Module](https://github.com/r00t-3xp10it/meterpeter/wiki)**<br />
+- **[Project Description](https://github.com/ebbieaden/meterpeter/blob/master/README.md#octocat-project-description)**<br />
+- **[List Of Available Modules](https://github.com/ebbieaden/meterpeter/blob/master/README.md#meterpeter-server-available-modules)**<br />
+- **[How To - Under Linux Distributions](https://github.com/ebbieaden/meterpeter/blob/master/README.md#attacker-machine-linux-kali)**<br />
+- **[How To - Under Windows Distributions](https://github.com/ebbieaden/meterpeter/blob/master/README.md#attacker-machiner-windows-pc)**<br />
+- **[Windows Defender (Target Related)](https://github.com/ebbieaden/meterpeter/blob/master/README.md#remark-about-windows-defender)**<br />
+- **[Special Thanks|Contributions|Videos](https://github.com/ebbieaden/meterpeter/blob/master/README.md#video-tutorials)**<br />
+- **[How To - Use PS2EXE to convert ps1 scripts to standalone executables](https://github.com/r00t-ebbieaden/meterpeter/blob/master/README.md#Use-PS2EXE-to-convert-ps1-scripts-to-standalone-executables)**<br />
+- **[Please Read my 'WIKI' page for detailed information about each Module](https://github.com/ebbieaden/meterpeter/wiki)**<br />
 
 <br />
 
@@ -220,7 +220,7 @@ powershell -File meterpeter.ps1
 
 **Remark**
 - meterpeter.ps1 delivers Dropper/Payload using python3 http.server. IF attacker has python3 installed.<br />
-  **'If NOT then the payload (Client) its written in Server Local [Working Directory](https://github.com/r00t-3xp10it/meterpeter/wiki/How-To-Display%7CChange-'Client'-Working-Directory) to be Manualy Deliver'** ..
+  **'If NOT then the payload (Client) its written in Server Local [Working Directory](https://github.com/ebbieaden/meterpeter/wiki/How-To-Display%7CChange-'Client'-Working-Directory) to be Manualy Deliver'** ..
 
 - Remmnenber to close the http.server terminal after the target have recived the two files (Dropper & Client)<br />
   **'And we have recived the connection in our meterpeter Server { to prevent Server|Client connection errors }'**<br /><br />
@@ -235,7 +235,7 @@ DELIVER 'Update-KB4524147' (.ps1=manual) OR (.zip=automated|silentExec) TO TARGE
      IF dropper.bat its executed: Then the Client will use $env:tmp has its working directory ('recomended')..
      IF Attacker decided to manualy execute Client: Then Client remote location (pwd) will be used has working dir .
 
-**[Quick Jump List](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
+**[Quick Jump List](https://github.com/ebbieaden/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
 
 ---
 
@@ -263,7 +263,7 @@ DELIVER 'Update-KB4524147' (.ps1=manual) OR (.zip=automated|silentExec) TO TARGE
 
 - **`REMARK:`** Client.exe (created by PS2EXEC) migth **malfunction** with meterpeter **mimiratz scripts**.
 
-**[Quick Jump List](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
+**[Quick Jump List](https://github.com/ebbieaden/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
 
 <br />
 
@@ -271,21 +271,18 @@ DELIVER 'Update-KB4524147' (.ps1=manual) OR (.zip=automated|silentExec) TO TARGE
 Using **keylogger** Module without the **Client** been executed as administrator, will trigger this kind of warnings by Windows Defender **AMSI** mechanism. IF the **Client** is executed as administrator and target machine as powershell **version 2** installed, then the keylogger execution its achieved using PSv2 (**bypassing Windows Defender AMSI|DEP|ASLR defenses**). The same method its also valid for **persistence** Module, executing our client using powershell version 2 (PS downgrade Attack).<br /><br />
 **Payloads|Droppers are FUD (Fully UnDetected) by AntiVirus (Please dont test samples on VirusTotal)**<br />
 ![AV](https://user-images.githubusercontent.com/23490060/74576599-6f030380-4f83-11ea-8e10-bdeefeb0b547.png)<br />
-**[Quick Jump List](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
+**[Quick Jump List](https://github.com/ebbieaden/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
 
 ---
 
 <br />
 
-### Video Tutorials:
-meterpeter Under Windows Distros: https://www.youtube.com/watch?v=d2npuCXsMvE<br />
-meterpeter Under Linux Distros: https://www.youtube.com/watch?v=CmMbWmN246E<br /><br />
 
 ### Special Thanks:
 **@ZHacker13** (Original Rev Shell) | **@tedburke** (CommandCam.exe binary)<br />
 **@codings9** (debugging project uWindows|Linux) | @ShantyDamayanti (debugging Windows)<br /><br />
-- **[meterpeter WIKI pages (Oficial Documentation)](https://github.com/r00t-3xp10it/meterpeter/wiki)**<br />
-- **[Jump To Top of this readme File](https://github.com/r00t-3xp10it/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
+- **[meterpeter WIKI pages (Oficial Documentation)](https://github.com/ebbieaden/meterpeter/wiki)**<br />
+- **[Jump To Top of this readme File](https://github.com/ebbieaden/meterpeter/blob/master/README.md#octocat-quick-jump-list)**<br />
 ---
 
 <br />
